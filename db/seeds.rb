@@ -31,3 +31,5 @@ m2 = Message.create({
   receiver: u1,
   body: "Nice to meet you"
 })
+
+m2.reply("Wanna get coffee?")

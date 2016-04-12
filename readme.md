@@ -32,3 +32,7 @@ Setting keys in production on heroku!
 ```
 heroku config:add FISH=trout
 ```
+
+# Further work
+
+Adding images via [PaperClip](paperclip.md) and storing them on [Amazon S3](amazon_s3.md)
