@@ -1,0 +1,9 @@
+<h1>New Message to <%= @user.email %></h1>
+
+<div class="new-message">
+  <%= form_for(@message) do |f| %>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+    <%= f.submit %>
+  <% end %>
+</div>

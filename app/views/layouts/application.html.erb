@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TwoHundredCupidApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/users/search">Search</a>
+    <a href="/messages?unread=true">messages</a>
+    <% if !current_user %>
+      <a href="/login">Login</a>
+      <a href="/sign_up">Sign Up</a>
+    <% else %>
+      <%= button_to("Logout", "/logout", method: :delete) %>
+    <% end %>
+  </nav>
+
+  <%= yield %>
+
+</body>
+</html>

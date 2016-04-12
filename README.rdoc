@@ -1,0 +1,6 @@
+TODO
+
+Implement file upload
+Implement some api key?
+Set an env var?
+Implement figaro in heroku

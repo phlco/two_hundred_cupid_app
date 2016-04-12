@@ -1,0 +1,15 @@
+<div class="message-controls">
+  <a href="/messages">View All</a>
+  <a href="/messages?unread=true">Unread</a>
+  <a href="/messages?sent=true">Sent</a>
+</div>
+
+<div class="messages">
+<% @messages.each do |message| %>
+  <div class="message">
+    <%= message.sender.email %>
+    <%= message.body %>
+    <%= link_to "Mark Read", mark_read_message_path(message) unless message.read? %>
+  </div>
+<% end %>
+</div>

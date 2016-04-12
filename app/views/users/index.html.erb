@@ -1,0 +1,17 @@
+<h1>Search by name</h1>
+<form method="GET" action="/users/search">
+  <input type="text" name="query">
+</form>
+
+<div class="users">
+<% if @users.any? %>
+  <% @users.each do |user| %>
+    <div class="user">
+      <%= user.email %>
+      <a href="/users/<%= user.id %>/messages/new">Message</a>
+    </div>
+  <% end %>
+<% else %>
+  <p>No results</p>
+<% end %>
+</div>
