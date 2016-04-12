@@ -2,9 +2,22 @@
 
 <div class="user-edit">
 <%= form_for current_user do |f| %>
-  <%= f.text_field :email %>
-  <%= f.text_field :password %>
-  <%= f.text_field :password_confirmation %>
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+  </div>
+  <div>
+    <%= f.label :password_confirmation %>
+    <%= f.text_field :password_confirmation %>
+  </div>
+  <div>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
   <%= f.submit %>
 <% end %>
 </div>

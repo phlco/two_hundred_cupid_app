@@ -1,4 +1,9 @@
 <h1><%= random_greeting %>, <%= current_user.email %>!</h1>
 
+<%= image_tag current_user.image.url(:med) %>
 
-<small><a href="/profile/edit">Edit</a></small>
+<div>
+  <small>
+    <a href="/profile/edit">Edit Profile</a>
+  </small>
+</div>
