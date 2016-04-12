@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     redirect_to('/') unless session[:user_id]
   end
 
+  # POST '/users'
   def create
     user = User.create(user_params)
     redirect_to profile_path
