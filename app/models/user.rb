@@ -10,6 +10,6 @@ class User < ActiveRecord::Base
   end
 
   def unread_messages
-    received_messages.where(is_read: false)
+    self.received_messages.where(is_read: false)
   end
 end
