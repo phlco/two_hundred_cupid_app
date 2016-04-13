@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   # POST '/users'
   def create
     user = User.create(user_params)
-    redirect_to profile_path
+    redirect_to login_path
   end
 
   def update

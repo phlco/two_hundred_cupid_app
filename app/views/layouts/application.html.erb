@@ -9,12 +9,12 @@
 <body>
   <nav>
     <a href="/">Home</a>
-    <a href="/users/search">Search</a>
-    <a href="/messages?unread=true">messages</a>
-    <% if !current_user %>
+    <% if current_user.nil? %>
       <a href="/login">Login</a>
       <a href="/sign_up">Sign Up</a>
     <% else %>
+      <a href="/users/search">Search</a>
+      <a href="/messages?unread=true">Messages</a>
       <%= button_to("Logout", "/logout", method: :delete) %>
     <% end %>
   </nav>
